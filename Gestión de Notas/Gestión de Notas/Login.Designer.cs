@@ -1,6 +1,6 @@
 ﻿namespace Gestión_de_Notas
 {
-    partial class Inicio
+    partial class Login
     {
         /// <summary>
         /// Variable del diseñador necesaria.

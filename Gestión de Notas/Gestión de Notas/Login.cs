@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Gestión_de_Notas
 {
-    public partial class Inicio : Form
+    public partial class Login : Form
     {
-        public Inicio()
+        public Login()
         {
             InitializeComponent();
         }

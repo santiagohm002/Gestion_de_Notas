@@ -1,0 +1,13 @@
+C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\Gestión de Notas\bin\Debug\Gestión de Notas.exe.config
+C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\Gestión de Notas\bin\Debug\Gestión de Notas.exe
+C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\Gestión de Notas\bin\Debug\Gestión de Notas.pdb
+C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\Gestión de Notas\obj\Debug\Presentacion.csproj.AssemblyReference.cache
+C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\Gestión de Notas\obj\Debug\Gestión_de_Notas.Inicio.resources
+C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\Gestión de Notas\obj\Debug\Gestión_de_Notas.Login_Admin.resources
+C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\Gestión de Notas\obj\Debug\Gestión_de_Notas.Login_Student.resources
+C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\Gestión de Notas\obj\Debug\Gestión_de_Notas.Login_Teacher.resources
+C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\Gestión de Notas\obj\Debug\Gestión_de_Notas.Properties.Resources.resources
+C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\Gestión de Notas\obj\Debug\Presentacion.csproj.GenerateResource.cache
+C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\Gestión de Notas\obj\Debug\Presentacion.csproj.CoreCompileInputs.cache
+C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\Gestión de Notas\obj\Debug\Gestión de Notas.exe
+C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\Gestión de Notas\obj\Debug\Gestión de Notas.pdb
