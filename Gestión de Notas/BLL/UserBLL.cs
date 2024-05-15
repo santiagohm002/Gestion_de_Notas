@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DAL;
 
 namespace BLL
 {
@@ -17,10 +16,25 @@ namespace BLL
             this.connectionString = connectionString;
         }
 
-        public int ValidateUserLogin(string username, string password)
+        public bool ValidateUserLogin(string username, string password)
         {
             UserDAL userDAL = new UserDAL(connectionString);
-            return userDAL.ValidateUserLogin(username, password);
+            int userId = userDAL.ValidateUserLogin(username, password);
+
+            return userId != -1;
+        }
+
+        public string GetUserType(string username)
+        {
+            UserDAL userDAL = new UserDAL(connectionString);
+            return userDAL.GetUserType(username);
+        }
+
+        public bool ValidatePassword(string username, string password)
+        {
+            UserDAL userDAL = new UserDAL(connectionString);
+            return userDAL.ValidatePassword(username, password);
         }
     }
 }
+

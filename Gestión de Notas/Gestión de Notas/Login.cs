@@ -27,17 +27,49 @@ namespace Gestión_de_Notas
             string password = txt_Pass.Text;
 
             UserBLL userBLL = new UserBLL(connectionString);
-            int userId = userBLL.ValidateUserLogin(username, password);
 
-            if (userId != -1)
+            bool isValidUser = userBLL.ValidateUserLogin(username, password);
+
+            if (isValidUser)
             {
-                MessageBox.Show("Inicio de sesión exitoso. Usuario ID: " + userId);
+                if (userBLL.ValidatePassword(username, password))
+                {
+                    string userType = userBLL.GetUserType(username);
+                    MessageBox.Show($"Ha iniciado sesión correctamente como {userType}.");
+
+                    switch (userType)
+                    {
+                        case "Administrador":
+                            MessageBox.Show("Bienvenido");
+                            break;
+                        case "Estudiante":
+                            MessageBox.Show("Bienvenido");
+                            break;
+                        case "Docente":
+                            MessageBox.Show("Bienvenido");
+                            break;
+                        default:
+                            MessageBox.Show("Tipo de usuario no reconocido.");
+                            return;
+                    }
+
+                    txt_User.Text = "";
+                    txt_Pass.Text = "";
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Contraseña incorrecta.");
+                    txt_Pass.Text = "";
+                }
             }
             else
             {
                 MessageBox.Show("Nombre de usuario o contraseña incorrectos.");
+                txt_Pass.Text = "";
             }
         }
+
 
         private void btn_Close_Click(object sender, EventArgs e)
         {

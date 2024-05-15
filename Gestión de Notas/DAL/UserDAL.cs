@@ -40,5 +40,53 @@ namespace DAL
 
             return userId;
         }
+
+        public string GetUserType(string username)
+        {
+            string userType = null;
+            string query = "SELECT TipoUsuario FROM Usuarios WHERE NombreUsuario = @Username";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Username", username);
+
+                    connection.Open();
+                    object result = command.ExecuteScalar();
+
+                    if (result != null)
+                    {
+                        userType = result.ToString();
+                    }
+                }
+            }
+
+            return userType;
+        }
+
+        public bool ValidatePassword(string username, string password)
+        {
+            bool isValid = false;
+            string query = "SELECT Contraseña FROM Usuarios WHERE NombreUsuario = @Username";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Username", username);
+
+                    connection.Open();
+                    string storedPassword = (string)command.ExecuteScalar();
+
+                    if (storedPassword == password)
+                    {
+                        isValid = true;
+                    }
+                }
+            }
+
+            return isValid;
+        }
     }
 }
