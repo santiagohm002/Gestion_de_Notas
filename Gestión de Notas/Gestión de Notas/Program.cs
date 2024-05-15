@@ -16,7 +16,8 @@ namespace Gestión_de_Notas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            string connectionString = @"Data Source=SANTIAGO\MSSQLSERVER01;Initial Catalog=Colegio;Integrated Security=True";
+            Application.Run(new Login(connectionString));
         }
     }
 }

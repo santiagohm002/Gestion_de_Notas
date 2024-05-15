@@ -1,0 +1,6 @@
+C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\DAL\bin\Debug\DAL.dll
+C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\DAL\bin\Debug\DAL.pdb
+C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\DAL\obj\Debug\DAL.dll
+C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\DAL\obj\Debug\DAL.pdb

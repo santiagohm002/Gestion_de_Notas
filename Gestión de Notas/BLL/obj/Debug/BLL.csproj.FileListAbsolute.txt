@@ -1,0 +1,9 @@
+C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\BLL\bin\Debug\BLL.dll
+C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\BLL\bin\Debug\BLL.pdb
+C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\BLL\bin\Debug\DAL.dll
+C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\BLL\bin\Debug\DAL.pdb
+C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\BLL\obj\Debug\BLL.csproj.Up2Date
+C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\BLL\obj\Debug\BLL.dll
+C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\BLL\obj\Debug\BLL.pdb
