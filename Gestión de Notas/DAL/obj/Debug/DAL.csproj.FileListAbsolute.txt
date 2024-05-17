@@ -4,3 +4,6 @@ C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\DAL\obj\Debug\DAL.csproj.
 C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\DAL\obj\Debug\DAL.dll
 C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\DAL\obj\Debug\DAL.pdb
+C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\DAL\bin\Debug\Entity.dll
+C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\DAL\bin\Debug\Entity.pdb
+C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\DAL\obj\Debug\DAL.csproj.Up2Date

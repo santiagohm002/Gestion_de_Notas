@@ -13,3 +13,7 @@ C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\Gestión de Notas\bin\Deb
 C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\Gestión de Notas\bin\Debug\DAL.pdb
 C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\Gestión de Notas\obj\Debug\Gestión_de_Notas.Login.resources
 C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\Gestión de Notas\obj\Debug\Presenta.BC77CD05.Up2Date
+C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\Gestión de Notas\bin\Debug\Entity.dll
+C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\Gestión de Notas\bin\Debug\Entity.pdb
+C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\Gestión de Notas\obj\Debug\Gestión_de_Notas.FormPortalAdmin.resources
+C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\Gestión de Notas\obj\Debug\Gestión_de_Notas.FormStudent.resources

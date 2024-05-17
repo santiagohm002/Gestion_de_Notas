@@ -1,0 +1,6 @@
+C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\Entity\bin\Debug\Entity.dll
+C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\Entity\bin\Debug\Entity.pdb
+C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\Entity\obj\Debug\Entity.csproj.AssemblyReference.cache
+C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\Entity\obj\Debug\Entity.csproj.CoreCompileInputs.cache
+C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\Entity\obj\Debug\Entity.dll
+C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\Entity\obj\Debug\Entity.pdb
