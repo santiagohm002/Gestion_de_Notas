@@ -23,9 +23,11 @@ namespace Gestión_de_Notas
         }
         private void btn_Teacher_Click(object sender, EventArgs e)
         {
+            openChildform(new FormTeacher());
         }
         private void btn_Period_Click(object sender, EventArgs e)
         {
+
         }
         private void btn_Notes_Click(object sender, EventArgs e)
         {
