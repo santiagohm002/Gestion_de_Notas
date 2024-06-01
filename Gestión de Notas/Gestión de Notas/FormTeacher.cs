@@ -32,6 +32,11 @@ namespace Gestión_de_Notas
                 Especialidad = txt_Specialty.Text,
             };
             teacherBLL.CrearDocente(newTeacher);
+            MessageBox.Show($"Se ha registrado el docente correctamente");
+            txt_Id.Text = "";
+            txt_Name.Text = "";
+            txt_Surname.Text = "";
+            txt_Specialty.Text = "";
 
             RefreshDataGridView();
         }
@@ -45,6 +50,11 @@ namespace Gestión_de_Notas
                 Especialidad = txt_Specialty.Text,
             };
             teacherBLL.CrearDocente(newTeacher);
+            MessageBox.Show($"Se ha actualizado el docente correctamente");
+            txt_Id.Text = "";
+            txt_Name.Text = "";
+            txt_Surname.Text = "";
+            txt_Specialty.Text = "";
 
             RefreshDataGridView();
         }
@@ -53,6 +63,11 @@ namespace Gestión_de_Notas
             int identificacion = Convert.ToInt32(txt_Id.Text);
 
             teacherBLL.EliminarDocente(identificacion);
+            MessageBox.Show($"Se ha eliminado el docente correctamente");
+            txt_Id.Text = "";
+            txt_Name.Text = "";
+            txt_Surname.Text = "";
+            txt_Specialty.Text = "";
 
             RefreshDataGridView();
         }

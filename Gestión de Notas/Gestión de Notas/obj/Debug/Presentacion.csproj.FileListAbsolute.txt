@@ -18,3 +18,5 @@ C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\Gestión de Notas\bin\Deb
 C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\Gestión de Notas\obj\Debug\Gestión_de_Notas.FormPortalAdmin.resources
 C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\Gestión de Notas\obj\Debug\Gestión_de_Notas.FormStudent.resources
 C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\Gestión de Notas\obj\Debug\Gestión_de_Notas.FormTeacher.resources
+C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\Gestión de Notas\obj\Debug\Gestión_de_Notas.FormAssigTeach.resources
+C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\Gestión de Notas\obj\Debug\Gestión_de_Notas.FormGrades.resources

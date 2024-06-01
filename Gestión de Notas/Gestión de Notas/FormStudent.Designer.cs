@@ -165,7 +165,7 @@
             this.btn_Consult.Name = "btn_Consult";
             this.btn_Consult.Size = new System.Drawing.Size(145, 55);
             this.btn_Consult.TabIndex = 66;
-            this.btn_Consult.Text = "Consultar lista de Estudiante por grado";
+            this.btn_Consult.Text = "Consultar Estudiante";
             this.btn_Consult.UseVisualStyleBackColor = true;
             this.btn_Consult.Click += new System.EventHandler(this.btn_Consult_Click);
             // 

@@ -41,6 +41,32 @@ namespace DAL
 
             return estudiantes;
         }
+        public List<Student> ObtenerEstudiantesPorIdentificacion(string id)
+        {
+            List<Student> estudiantes = new List<Student>();
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "SELECT * FROM Estudiantes WHERE Identificacion = @Identificacion";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@Identificacion", id);
+
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    Student estudiante = new Student();
+                    estudiante.Identificacion = reader["Identificacion"].ToString();
+                    estudiante.Nombre = reader["Nombre"].ToString();
+                    estudiante.Apellido = reader["Apellido"].ToString();
+                    estudiante.Grado = Convert.ToInt32(reader["Grado"]);
+                    estudiantes.Add(estudiante);
+                }
+            }
+
+            return estudiantes;
+        }
         public List<Student> ObtenerEstudiantesPorGrado(int grado)
         {
             List<Student> estudiantes = new List<Student>();

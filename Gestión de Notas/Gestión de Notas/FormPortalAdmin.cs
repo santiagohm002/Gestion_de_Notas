@@ -25,12 +25,20 @@ namespace Gestión_de_Notas
         {
             openChildform(new FormTeacher());
         }
+        private void btn_AssignTeach_Click(object sender, EventArgs e)
+        {
+            openChildform(new FormAssigTeach());
+        }
         private void btn_Period_Click(object sender, EventArgs e)
         {
 
         }
         private void btn_Notes_Click(object sender, EventArgs e)
         {
+        }
+        private void btn_Grades_Click(object sender, EventArgs e)
+        {
+            openChildform(new FormGrades());
         }
         private void btn_Close_Click(object sender, EventArgs e)
         {

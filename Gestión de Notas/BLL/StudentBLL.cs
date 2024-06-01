@@ -18,7 +18,10 @@ public class StudentBLL
     {
         return studentDAL.ObtenerTodosLosEstudiantes();
     }
-
+    public List<Student> ConsultarEstudiantesPorIdentificacion(string id)
+    {
+        return studentDAL.ObtenerEstudiantesPorIdentificacion(id);
+    }
     public List<Student> ConsultarEstudiantesPorGrado(int grado)
     {
         return studentDAL.ObtenerEstudiantesPorGrado(grado);

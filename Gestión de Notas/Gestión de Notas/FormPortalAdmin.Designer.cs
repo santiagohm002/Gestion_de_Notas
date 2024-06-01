@@ -30,8 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPortalAdmin));
             this.panelSideMenu = new System.Windows.Forms.Panel();
-            this.btn_Close = new System.Windows.Forms.Button();
+            this.btn_Grades = new System.Windows.Forms.Button();
+            this.btn_Notes = new System.Windows.Forms.Button();
             this.btn_Period = new System.Windows.Forms.Button();
+            this.btn_Close = new System.Windows.Forms.Button();
+            this.btn_AssignTeach = new System.Windows.Forms.Button();
             this.btn_Teacher = new System.Windows.Forms.Button();
             this.btn_Student = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
@@ -39,7 +42,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panelChildform = new System.Windows.Forms.Panel();
-            this.btn_Notes = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -50,9 +52,11 @@
             // 
             this.panelSideMenu.AutoScroll = true;
             this.panelSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(81)))), ((int)(((byte)(255)))));
+            this.panelSideMenu.Controls.Add(this.btn_Grades);
             this.panelSideMenu.Controls.Add(this.btn_Notes);
-            this.panelSideMenu.Controls.Add(this.btn_Close);
             this.panelSideMenu.Controls.Add(this.btn_Period);
+            this.panelSideMenu.Controls.Add(this.btn_Close);
+            this.panelSideMenu.Controls.Add(this.btn_AssignTeach);
             this.panelSideMenu.Controls.Add(this.btn_Teacher);
             this.panelSideMenu.Controls.Add(this.btn_Student);
             this.panelSideMenu.Controls.Add(this.panelLogo);
@@ -62,6 +66,48 @@
             this.panelSideMenu.Name = "panelSideMenu";
             this.panelSideMenu.Size = new System.Drawing.Size(250, 573);
             this.panelSideMenu.TabIndex = 0;
+            // 
+            // btn_Grades
+            // 
+            this.btn_Grades.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Grades.FlatAppearance.BorderSize = 0;
+            this.btn_Grades.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Grades.ForeColor = System.Drawing.Color.White;
+            this.btn_Grades.Location = new System.Drawing.Point(0, 329);
+            this.btn_Grades.Name = "btn_Grades";
+            this.btn_Grades.Size = new System.Drawing.Size(250, 45);
+            this.btn_Grades.TabIndex = 17;
+            this.btn_Grades.Text = "Ver Grados";
+            this.btn_Grades.UseVisualStyleBackColor = true;
+            this.btn_Grades.Click += new System.EventHandler(this.btn_Grades_Click);
+            // 
+            // btn_Notes
+            // 
+            this.btn_Notes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Notes.FlatAppearance.BorderSize = 0;
+            this.btn_Notes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Notes.ForeColor = System.Drawing.Color.White;
+            this.btn_Notes.Location = new System.Drawing.Point(0, 284);
+            this.btn_Notes.Name = "btn_Notes";
+            this.btn_Notes.Size = new System.Drawing.Size(250, 45);
+            this.btn_Notes.TabIndex = 16;
+            this.btn_Notes.Text = "Notas";
+            this.btn_Notes.UseVisualStyleBackColor = true;
+            this.btn_Notes.Click += new System.EventHandler(this.btn_Notes_Click);
+            // 
+            // btn_Period
+            // 
+            this.btn_Period.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Period.FlatAppearance.BorderSize = 0;
+            this.btn_Period.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Period.ForeColor = System.Drawing.Color.White;
+            this.btn_Period.Location = new System.Drawing.Point(0, 239);
+            this.btn_Period.Name = "btn_Period";
+            this.btn_Period.Size = new System.Drawing.Size(250, 45);
+            this.btn_Period.TabIndex = 15;
+            this.btn_Period.Text = "Periodos";
+            this.btn_Period.UseVisualStyleBackColor = true;
+            this.btn_Period.Click += new System.EventHandler(this.btn_Period_Click);
             // 
             // btn_Close
             // 
@@ -77,19 +123,19 @@
             this.btn_Close.UseVisualStyleBackColor = true;
             this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
             // 
-            // btn_Period
+            // btn_AssignTeach
             // 
-            this.btn_Period.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_Period.FlatAppearance.BorderSize = 0;
-            this.btn_Period.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Period.ForeColor = System.Drawing.Color.White;
-            this.btn_Period.Location = new System.Drawing.Point(0, 194);
-            this.btn_Period.Name = "btn_Period";
-            this.btn_Period.Size = new System.Drawing.Size(250, 45);
-            this.btn_Period.TabIndex = 7;
-            this.btn_Period.Text = "Periodos";
-            this.btn_Period.UseVisualStyleBackColor = true;
-            this.btn_Period.Click += new System.EventHandler(this.btn_Period_Click);
+            this.btn_AssignTeach.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_AssignTeach.FlatAppearance.BorderSize = 0;
+            this.btn_AssignTeach.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_AssignTeach.ForeColor = System.Drawing.Color.White;
+            this.btn_AssignTeach.Location = new System.Drawing.Point(0, 194);
+            this.btn_AssignTeach.Name = "btn_AssignTeach";
+            this.btn_AssignTeach.Size = new System.Drawing.Size(250, 45);
+            this.btn_AssignTeach.TabIndex = 7;
+            this.btn_AssignTeach.Text = "Asignar Materias";
+            this.btn_AssignTeach.UseVisualStyleBackColor = true;
+            this.btn_AssignTeach.Click += new System.EventHandler(this.btn_AssignTeach_Click);
             // 
             // btn_Teacher
             // 
@@ -167,20 +213,6 @@
             this.panelChildform.Size = new System.Drawing.Size(966, 536);
             this.panelChildform.TabIndex = 3;
             // 
-            // btn_Notes
-            // 
-            this.btn_Notes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_Notes.FlatAppearance.BorderSize = 0;
-            this.btn_Notes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Notes.ForeColor = System.Drawing.Color.White;
-            this.btn_Notes.Location = new System.Drawing.Point(0, 239);
-            this.btn_Notes.Name = "btn_Notes";
-            this.btn_Notes.Size = new System.Drawing.Size(250, 45);
-            this.btn_Notes.TabIndex = 15;
-            this.btn_Notes.Text = "Notas";
-            this.btn_Notes.UseVisualStyleBackColor = true;
-            this.btn_Notes.Click += new System.EventHandler(this.btn_Notes_Click);
-            // 
             // FormPortalAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -210,12 +242,14 @@
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Button btn_Student;
         private System.Windows.Forms.Button btn_Teacher;
-        private System.Windows.Forms.Button btn_Period;
+        private System.Windows.Forms.Button btn_AssignTeach;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btn_Close;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panelChildform;
+        private System.Windows.Forms.Button btn_Period;
+        private System.Windows.Forms.Button btn_Grades;
         private System.Windows.Forms.Button btn_Notes;
     }
 }

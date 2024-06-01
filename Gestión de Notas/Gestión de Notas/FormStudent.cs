@@ -32,6 +32,11 @@ namespace Gestión_de_Notas
                 Grado = Convert.ToInt32(txt_Grades.SelectedItem)
             };
             studentBLL.CrearEstudiante(newStudent);
+            MessageBox.Show($"Se ha registrado el estudiante correctamente");
+            txt_Id.Text = "";
+            txt_Name.Text = "";
+            txt_Surname.Text = "";
+            txt_Grades.Text = "";
 
             RefreshDataGridView();
         }
@@ -44,8 +49,12 @@ namespace Gestión_de_Notas
                 Apellido = txt_Surname.Text,
                 Grado = Convert.ToInt32(txt_Grades.SelectedItem)
             };
-
             studentBLL.EditarEstudiante(updatedStudent);
+            MessageBox.Show($"Se ha actualizado el estudiante correctamente");
+            txt_Id.Text = "";
+            txt_Name.Text = "";
+            txt_Surname.Text = "";
+            txt_Grades.Text = "";
 
             RefreshDataGridView();
         }
@@ -54,14 +63,19 @@ namespace Gestión_de_Notas
             int identificacion = Convert.ToInt32(txt_Id.Text);
 
             studentBLL.EliminarEstudiante(identificacion);
+            MessageBox.Show($"Se ha eliminado el estudiante correctamente");
+            txt_Id.Text = "";
+            txt_Name.Text = "";
+            txt_Surname.Text = "";
+            txt_Grades.Text = "";
 
             RefreshDataGridView();
         }
         private void btn_Consult_Click(object sender, EventArgs e)
         {
-            int grado = Convert.ToInt32(txt_Grades.SelectedItem);
+            string id = txt_Id.Text;
 
-            RefreshDataGridView(studentBLL.ConsultarEstudiantesPorGrado(grado));
+            RefreshDataGridView(studentBLL.ConsultarEstudiantesPorIdentificacion(id));
         }
         private void RefreshDataGridView(List<Student> estudiantes = null)
         {

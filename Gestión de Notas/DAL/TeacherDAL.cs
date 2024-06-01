@@ -120,6 +120,21 @@ namespace DAL
 
                 try
                 {
+                    string obtenerProfesorIDQuery = "SELECT DocenteID FROM Docentes WHERE Identificacion = @Identificacion";
+                    SqlCommand obtenerProfesorIDCommand = new SqlCommand(obtenerProfesorIDQuery, connection, transaction);
+                    obtenerProfesorIDCommand.Parameters.AddWithValue("@Identificacion", id);
+                    int profesorID = (int)obtenerProfesorIDCommand.ExecuteScalar();
+
+                    string verificarAsignacionQuery = "SELECT COUNT(*) FROM Asignaciones WHERE ProfesorID = @ProfesorID";
+                    SqlCommand verificarAsignacionCommand = new SqlCommand(verificarAsignacionQuery, connection, transaction);
+                    verificarAsignacionCommand.Parameters.AddWithValue("@ProfesorID", profesorID);
+                    int count = (int)verificarAsignacionCommand.ExecuteScalar();
+
+                    if (count > 0)
+                    {
+                        throw new Exception("No se puede eliminar el docente porque está asignado a una materia.");
+                    }
+
                     string deleteDocenteQuery = "DELETE FROM Docentes WHERE Identificacion = @Identificacion";
                     SqlCommand deleteDocenteCommand = new SqlCommand(deleteDocenteQuery, connection, transaction);
                     deleteDocenteCommand.Parameters.AddWithValue("@Identificacion", id);
@@ -135,7 +150,7 @@ namespace DAL
                 catch (Exception ex)
                 {
                     transaction.Rollback();
-                    throw new Exception("Error al eliminar el estudiante y su usuario asociado", ex);
+                    throw new Exception("Error al eliminar el docente y su usuario asociado", ex);
                 }
             }
         }
