@@ -60,17 +60,27 @@ namespace Gestión_de_Notas
         }
         private void btn_Delete_Click(object sender, EventArgs e)
         {
-            int identificacion = Convert.ToInt32(txt_Id.Text);
+            try
+            {
+                int identificacion = Convert.ToInt32(txt_Id.Text);
 
-            teacherBLL.EliminarDocente(identificacion);
-            MessageBox.Show($"Se ha eliminado el docente correctamente");
-            txt_Id.Text = "";
-            txt_Name.Text = "";
-            txt_Surname.Text = "";
-            txt_Specialty.Text = "";
+                teacherBLL.EliminarDocente(identificacion);
 
-            RefreshDataGridView();
+                MessageBox.Show("Eliminación de Docente exitosa", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                txt_Id.Text = "";
+                txt_Name.Text = "";
+                txt_Surname.Text = "";
+                txt_Specialty.Text = "";
+
+                RefreshDataGridView();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al eliminar la Docente: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
         private void btn_Consult_Click(object sender, EventArgs e)
         {
             string especialidad = txt_Specialty.Text;

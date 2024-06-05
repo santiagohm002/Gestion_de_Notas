@@ -37,7 +37,14 @@ namespace BLL
 
         public void EliminarDocente(int id)
         {
-            teacherDAL.EliminarDocente(id);
+            try
+            {
+                teacherDAL.EliminarDocente(id);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al eliminar la Docente: " + ex.Message);
+            }
         }
     }
 }

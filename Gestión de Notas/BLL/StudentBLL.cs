@@ -6,38 +6,44 @@ using System.Threading.Tasks;
 using DAL;
 using Entity;
 
-public class StudentBLL
+namespace BLL
 {
-    private readonly StudentDAL studentDAL;
+    public class StudentBLL
+    {
+        private readonly StudentDAL studentDAL;
 
-    public StudentBLL(string connectionString)
-    {
-        studentDAL = new StudentDAL(connectionString);
-    }
-    public List<Student> ObtenerTodosLosEstudiantes()
-    {
-        return studentDAL.ObtenerTodosLosEstudiantes();
-    }
-    public List<Student> ConsultarEstudiantesPorIdentificacion(string id)
-    {
-        return studentDAL.ObtenerEstudiantesPorIdentificacion(id);
-    }
-    public List<Student> ConsultarEstudiantesPorGrado(int grado)
-    {
-        return studentDAL.ObtenerEstudiantesPorGrado(grado);
-    }
-    public void CrearEstudiante(Student estudiante)
-    {
-        studentDAL.CrearEstudiante(estudiante);
-    }
+        public StudentBLL(string connectionString)
+        {
+            studentDAL = new StudentDAL(connectionString);
+        }
 
-    public void EditarEstudiante(Student estudiante)
-    {
-        studentDAL.EditarEstudiante(estudiante);
-    }
+        public void AddStudent(Student student)
+        {
+            studentDAL.AddStudent(student);
+        }
 
-    public void EliminarEstudiante(int id)
-    {
-        studentDAL.EliminarEstudiante(id);
+        public void UpdateStudent(Student student)
+        {
+            studentDAL.UpdateStudent(student);
+        }
+
+        public void DeleteStudent(int identificacion)
+        {
+            studentDAL.DeleteStudent(identificacion);
+        }
+
+        public Student GetStudentById(int identificacion)
+        {
+            return studentDAL.GetStudentById(identificacion);
+        }
+
+        public bool IsIdentificationDuplicate(int identification)
+        {
+            return studentDAL.IsIdentificationDuplicate(identification);
+        }
+        public List<Student> GetAllStudents()
+        {
+            return studentDAL.GetAllStudents();
+        }
     }
 }

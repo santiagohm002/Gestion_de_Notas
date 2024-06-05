@@ -150,7 +150,7 @@ namespace DAL
                 catch (Exception ex)
                 {
                     transaction.Rollback();
-                    throw new Exception("Error al eliminar el docente y su usuario asociado", ex);
+                    throw new Exception("Error al eliminar el docente y su usuario asociado: " + ex.Message);
                 }
             }
         }

@@ -9,7 +9,7 @@ namespace DAL
 {
     public class UserDAL
     {
-        private string connectionString;
+        private readonly string connectionString;
 
         public UserDAL(string connectionString)
         {
@@ -67,7 +67,7 @@ namespace DAL
 
         public bool ValidatePassword(string username, string password)
         {
-            bool isValid = false;
+            string storedPassword = null;
             string query = "SELECT Contraseña FROM Usuarios WHERE NombreUsuario = @Username";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -77,16 +77,11 @@ namespace DAL
                     command.Parameters.AddWithValue("@Username", username);
 
                     connection.Open();
-                    string storedPassword = (string)command.ExecuteScalar();
-
-                    if (storedPassword == password)
-                    {
-                        isValid = true;
-                    }
+                    storedPassword = (string)command.ExecuteScalar();
                 }
             }
 
-            return isValid;
+            return storedPassword != null && storedPassword == password;
         }
     }
 }
