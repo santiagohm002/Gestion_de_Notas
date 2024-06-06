@@ -112,13 +112,14 @@ namespace DAL
                 SqlCommand command = new SqlCommand(query, connection);
 
                 connection.Open();
+
                 SqlDataReader reader = command.ExecuteReader();
 
                 while (reader.Read())
                 {
                     Student student = new Student
                     {
-                        ID = (int)reader["EstudianteID"],
+                        ID = (int)reader["ID"],
                         NombreCompleto = (string)reader["NombreCompleto"],
                         Identificacion = (int)reader["Identificacion"],
                         FechaNacimiento = (DateTime)reader["FechaNacimiento"],

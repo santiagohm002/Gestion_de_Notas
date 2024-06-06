@@ -15,12 +15,38 @@ namespace Gestión_de_Notas
     public partial class FormStudent : Form
     {
         private readonly StudentBLL studentBLL;
-        private readonly string connectionString = "Data Source= sql.holamundodevs.com; Initial Catalog= Santiago_DB ;User ID= santiagohernandez ;Password= Holamundo123*";
+        private readonly string connectionString = "Data Source= 108.181.184.38; Initial Catalog= SantiagoDB ;User ID= santiagohernandez ;Password= Holamundo123*";
         public FormStudent()
         {
             InitializeComponent();
             studentBLL = new StudentBLL(connectionString);
+            InitializeDataGridView();
+            this.Load += FormStudent_Load;
         }
+
+        private void FormStudent_Load(object sender, EventArgs e)
+        {
+            // Llama al método para actualizar el DataGridView con los estudiantes
+            RefreshStudentGrid();
+        }
+
+        private void InitializeDataGridView()
+        {
+            // Limpia las columnas existentes (si las hay)
+            dtg_Student.Columns.Clear();
+
+            // Define las columnas del DataGridView
+            dtg_Student.Columns.Add("ID", "ID");
+            dtg_Student.Columns.Add("NombreCompleto", "Nombre Completo");
+            dtg_Student.Columns.Add("Identificacion", "Identificación");
+            dtg_Student.Columns.Add("FechaNacimiento", "Fecha de Nacimiento");
+            dtg_Student.Columns.Add("Edad", "Edad");
+            dtg_Student.Columns.Add("Direccion", "Dirección");
+            dtg_Student.Columns.Add("TelefonoContacto", "Teléfono de Contacto");
+            dtg_Student.Columns.Add("CorreoElectronico", "Correo Electrónico");
+        }
+
+
         private void btn_Add_Click(object sender, EventArgs e)
         {
             // Validar que el número de identificación no esté duplicado
@@ -191,26 +217,47 @@ namespace Gestión_de_Notas
         // Método para actualizar la tabla de estudiantes
         private void RefreshStudentGrid()
         {
-            List<Student> students = studentBLL.GetAllStudents();
-
-            // Limpiar el DataGridView antes de agregar nuevos datos
-            dtg_Student.Rows.Clear();
-
-            foreach (Student student in students)
+            try
             {
-                // Calcular la edad del estudiante
-                int age = CalculateAge(student.FechaNacimiento);
+                // Limpia las filas existentes
+                dtg_Student.Rows.Clear();
 
-                // Agregar una nueva fila al DataGridView con los datos del estudiante
-                dtg_Student.Rows.Add(student.ID, student.NombreCompleto, student.Identificacion, student.FechaNacimiento, age, student.Direccion, student.TelefonoContacto, student.CorreoElectronico);
+                // Obtén todos los estudiantes
+                List<Student> students = studentBLL.GetAllStudents();
+
+                // Verifica si se obtuvieron datos de la base de datos
+                if (students != null && students.Count > 0)
+                {
+                    // Agrega cada estudiante como una fila en el DataGridView
+                    foreach (Student student in students)
+                    {
+                        // Calcula la edad del estudiante
+                        int age = CalculateAge(student.FechaNacimiento);
+
+                        // Formatea la fecha como una cadena corta
+                        string shortDate = student.FechaNacimiento.ToShortDateString();
+
+                        // Agrega el estudiante como una fila en el DataGridView, incluyendo la edad y la fecha formateada
+                        dtg_Student.Rows.Add(student.ID, student.NombreCompleto, student.Identificacion, shortDate, age, student.Direccion, student.TelefonoContacto, student.CorreoElectronico);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No se encontraron estudiantes en la base de datos.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar los estudiantes: " + ex.Message);
             }
         }
 
-        private int CalculateAge(DateTime dateOfBirth)
+        // Método para calcular la edad a partir de la fecha de nacimiento
+        private int CalculateAge(DateTime birthdate)
         {
-            DateTime today = DateTime.Today;
-            int age = today.Year - dateOfBirth.Year;
-            if (dateOfBirth > today.AddYears(-age))
+            DateTime now = DateTime.Today;
+            int age = now.Year - birthdate.Year;
+            if (now < birthdate.AddYears(age))
             {
                 age--;
             }

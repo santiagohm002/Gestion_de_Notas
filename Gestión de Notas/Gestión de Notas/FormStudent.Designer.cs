@@ -125,7 +125,7 @@
             // 
             this.btn_Consult.Location = new System.Drawing.Point(46, 435);
             this.btn_Consult.Name = "btn_Consult";
-            this.btn_Consult.Size = new System.Drawing.Size(145, 39);
+            this.btn_Consult.Size = new System.Drawing.Size(160, 39);
             this.btn_Consult.TabIndex = 66;
             this.btn_Consult.Text = "Consultar Estudiante";
             this.btn_Consult.UseVisualStyleBackColor = true;
