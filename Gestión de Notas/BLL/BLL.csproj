@@ -46,6 +46,7 @@
     <Compile Include="GradeBLL.cs" />
     <Compile Include="PortalBLL.cs" />
     <Compile Include="ReportBLL.cs" />
+    <Compile Include="RoomBLL.cs" />
     <Compile Include="StudentBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TeacherBLL.cs" />

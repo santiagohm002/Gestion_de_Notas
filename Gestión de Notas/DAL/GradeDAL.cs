@@ -15,66 +15,140 @@ namespace DAL
 
         public void AddGrade(Grade grade)
         {
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                conn.Open();
+                connection.Open();
                 string query = "INSERT INTO Grados (NombreGrado, NivelEducacional) VALUES (@NombreGrado, @NivelEducacional)";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@NombreGrado", grade.Nombre);
-                cmd.Parameters.AddWithValue("@NivelEducacional", grade.NivelEducativo);
-                cmd.ExecuteNonQuery();
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@NombreGrado", grade.NombreGrado);
+                    command.Parameters.AddWithValue("@NivelEducacional", grade.NivelEducacional);
+                    command.ExecuteNonQuery();
+                }
             }
         }
 
-        public bool IsGradeNameDuplicate(string gradeName)
+        public void DeleteGradeByName(string name)
         {
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                conn.Open();
-                string query = "SELECT COUNT(*) FROM Grados WHERE NombreGrado = @NombreGrado";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@NombreGrado", gradeName);
-                int count = (int)cmd.ExecuteScalar();
-                return count > 0;
+                connection.Open();
+                string query = "DELETE FROM Grados WHERE NombreGrado = @NombreGrado";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@NombreGrado", name);
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public void UpdateGrade(Grade grade)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "UPDATE Grados SET NivelEducacional = @NivelEducacional WHERE NombreGrado = @NombreGrado";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@NombreGrado", grade.NombreGrado);
+                    command.Parameters.AddWithValue("@NivelEducacional", grade.NivelEducacional);
+                    command.ExecuteNonQuery();
+                }
             }
         }
 
         public List<Grade> GetAllGrades()
         {
             List<Grade> grades = new List<Grade>();
-
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                conn.Open();
-                string query = "SELECT ID, NombreGrado, NivelEducacional FROM Grados";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                SqlDataReader reader = cmd.ExecuteReader();
-
-                while (reader.Read())
+                connection.Open();
+                string query = "SELECT * FROM Grados";
+                using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    Grade grade = new Grade
+                    using (SqlDataReader reader = command.ExecuteReader())
                     {
-                        ID = reader.GetInt32(0),
-                        Nombre = reader.GetString(1),
-                        NivelEducativo = reader.GetString(2)
-                    };
-                    grades.Add(grade);
+                        while (reader.Read())
+                        {
+                            Grade grade = new Grade
+                            {
+                                ID = (int)reader["ID"],
+                                NombreGrado = (string)reader["NombreGrado"],
+                                NivelEducacional = (string)reader["NivelEducacional"]
+                            };
+                            grades.Add(grade);
+                        }
+                    }
                 }
             }
-
             return grades;
         }
 
-        public void DeleteGradeByName(string gradeName)
+        public bool IsGradeNameDuplicate(string nombre)
         {
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                conn.Open();
-                string query = "DELETE FROM Grados WHERE NombreGrado = @NombreGrado";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@NombreGrado", gradeName);
-                cmd.ExecuteNonQuery();
+                string query = "SELECT COUNT(*) FROM Grados WHERE NombreGrado = @NombreGrado";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@NombreGrado", nombre);
+
+                connection.Open();
+                int count = (int)command.ExecuteScalar();
+                return count > 0;
             }
+        }
+
+        public Grade GetGradeById(int id)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "SELECT * FROM Grados WHERE ID = @ID";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@ID", id);
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            return new Grade
+                            {
+                                ID = (int)reader["ID"],
+                                NombreGrado = (string)reader["NombreGrado"],
+                                NivelEducacional = (string)reader["NivelEducacional"]
+                            };
+                        }
+                    }
+                }
+            }
+            return null;
+        }
+
+
+        public Grade GetGradeByName(string name)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "SELECT * FROM Grados WHERE NombreGrado = @NombreGrado";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@NombreGrado", name);
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            return new Grade
+                            {
+                                ID = (int)reader["ID"],
+                                NombreGrado = (string)reader["NombreGrado"],
+                                NivelEducacional = (string)reader["NivelEducacional"]
+                            };
+                        }
+                    }
+                }
+            }
+            return null;
         }
     }
 }

@@ -14,8 +14,6 @@ namespace Gestión_de_Notas
 {
     public partial class FormAssigTeach : Form
     {
-        private readonly AssignmentBLL assignmentBLL;
-        private readonly string connectionString = @"Data Source=SANTIAGO\MSSQLSERVER01;Initial Catalog=Colegio;Integrated Security=True";
 
         public FormAssigTeach()
         {

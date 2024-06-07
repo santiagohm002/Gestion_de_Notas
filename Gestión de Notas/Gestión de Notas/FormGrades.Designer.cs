@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGrades));
             this.dtg_Grades = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
             this.btn_AddGrade = new System.Windows.Forms.Button();
@@ -36,13 +37,15 @@
             this.txt_LevelEd = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_DeleteGrad = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_Grades)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dtg_Grades
             // 
             this.dtg_Grades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtg_Grades.Location = new System.Drawing.Point(37, 95);
+            this.dtg_Grades.Location = new System.Drawing.Point(68, 103);
             this.dtg_Grades.Name = "dtg_Grades";
             this.dtg_Grades.RowHeadersWidth = 51;
             this.dtg_Grades.RowTemplate.Height = 24;
@@ -52,7 +55,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(34, 27);
+            this.label7.Location = new System.Drawing.Point(65, 35);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(116, 16);
             this.label7.TabIndex = 63;
@@ -60,7 +63,7 @@
             // 
             // btn_AddGrade
             // 
-            this.btn_AddGrade.Location = new System.Drawing.Point(37, 408);
+            this.btn_AddGrade.Location = new System.Drawing.Point(68, 416);
             this.btn_AddGrade.Name = "btn_AddGrade";
             this.btn_AddGrade.Size = new System.Drawing.Size(213, 55);
             this.btn_AddGrade.TabIndex = 81;
@@ -80,14 +83,14 @@
             // 
             // txt_Grades
             // 
-            this.txt_Grades.Location = new System.Drawing.Point(37, 46);
+            this.txt_Grades.Location = new System.Drawing.Point(68, 54);
             this.txt_Grades.Name = "txt_Grades";
             this.txt_Grades.Size = new System.Drawing.Size(154, 22);
             this.txt_Grades.TabIndex = 83;
             // 
             // txt_LevelEd
             // 
-            this.txt_LevelEd.Location = new System.Drawing.Point(370, 46);
+            this.txt_LevelEd.Location = new System.Drawing.Point(401, 54);
             this.txt_LevelEd.Name = "txt_LevelEd";
             this.txt_LevelEd.ReadOnly = true;
             this.txt_LevelEd.Size = new System.Drawing.Size(154, 22);
@@ -96,7 +99,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(367, 27);
+            this.label1.Location = new System.Drawing.Point(398, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(101, 16);
             this.label1.TabIndex = 84;
@@ -104,7 +107,7 @@
             // 
             // btn_DeleteGrad
             // 
-            this.btn_DeleteGrad.Location = new System.Drawing.Point(311, 408);
+            this.btn_DeleteGrad.Location = new System.Drawing.Point(342, 416);
             this.btn_DeleteGrad.Name = "btn_DeleteGrad";
             this.btn_DeleteGrad.Size = new System.Drawing.Size(213, 55);
             this.btn_DeleteGrad.TabIndex = 86;
@@ -112,11 +115,22 @@
             this.btn_DeleteGrad.UseVisualStyleBackColor = true;
             this.btn_DeleteGrad.Click += new System.EventHandler(this.btn_DeleteGrad_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(609, 153);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(290, 191);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 87;
+            this.pictureBox1.TabStop = false;
+            // 
             // FormGrades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(966, 536);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btn_DeleteGrad);
             this.Controls.Add(this.txt_LevelEd);
             this.Controls.Add(this.label1);
@@ -128,6 +142,7 @@
             this.Name = "FormGrades";
             this.Text = "FormGrades";
             ((System.ComponentModel.ISupportInitialize)(this.dtg_Grades)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -143,5 +158,6 @@
         private System.Windows.Forms.TextBox txt_LevelEd;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_DeleteGrad;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

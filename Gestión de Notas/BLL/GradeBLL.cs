@@ -18,6 +18,16 @@ namespace BLL
             gradeDAL.AddGrade(grade);
         }
 
+        public void DeleteGradeByName(string name)
+        {
+            gradeDAL.DeleteGradeByName(name);
+        }
+
+        public void UpdateGrade(Grade grade)
+        {
+            gradeDAL.UpdateGrade(grade);
+        }
+
         public List<Grade> GetAllGrades()
         {
             return gradeDAL.GetAllGrades();
@@ -28,9 +38,14 @@ namespace BLL
             return gradeDAL.IsGradeNameDuplicate(gradeName);
         }
 
-        public void DeleteGradeByName(string gradeName)
+        public Grade GetGradeById(int id)
         {
-            gradeDAL.DeleteGradeByName(gradeName);
+            return gradeDAL.GetGradeById(id);
+        }
+
+        public Grade GetGradeByName(string name)
+        {
+            return gradeDAL.GetGradeByName(name);
         }
     }
 }

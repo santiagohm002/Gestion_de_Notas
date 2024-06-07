@@ -110,7 +110,7 @@ namespace Gestión_de_Notas
 
         private void btn_UpdRoom_Click(object sender, EventArgs e)
         {
-            //openChildform(new FormUpdRoom());
+            openChildform(new FormRoom());
             hideSubMenu();
         }
 

@@ -28,10 +28,10 @@ namespace Gestión_de_Notas
             gradeBLL = new GradeBLL(connectionString);
             InitializeDataGridView();
             RefreshGradeGrid();
+            txt_LevelEd.Enabled = false; // Deshabilitar el campo de texto de nivel educativo
 
+            // Vincular el evento TextChanged al método txt_Grades_TextChanged
             txt_Grades.TextChanged += txt_Grades_TextChanged;
-
-            txt_LevelEd.ReadOnly = true;
         }
 
         private void InitializeDataGridView()
@@ -50,7 +50,7 @@ namespace Gestión_de_Notas
             List<Grade> grades = gradeBLL.GetAllGrades();
             foreach (Grade grade in grades)
             {
-                dtg_Grades.Rows.Add(grade.ID, grade.Nombre, grade.NivelEducativo);
+                dtg_Grades.Rows.Add(grade.ID, grade.NombreGrado, grade.NivelEducacional);
             }
         }
 
@@ -79,12 +79,12 @@ namespace Gestión_de_Notas
                 return;
             }
 
-            Grade grade = new Grade { Nombre = nombre };
-            grade.NivelEducativo = DetermineNivelEducativo(nombre);
+            Grade grade = new Grade { NombreGrado = nombre };
+            grade.NivelEducacional = DetermineNivelEducativo(nombre);
             gradeBLL.AddGrade(grade);
 
             // Actualizar el campo de texto con el nivel educativo
-            txt_LevelEd.Text = grade.NivelEducativo;
+            txt_LevelEd.Text = grade.NivelEducacional;
 
             RefreshGradeGrid();
             txt_Grades.Clear();
