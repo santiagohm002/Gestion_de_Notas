@@ -104,7 +104,7 @@ namespace Gestión_de_Notas
 
         private void btn_UpdGrad_Click(object sender, EventArgs e)
         {
-            //openChildform(new FormUpdGrad());
+            openChildform(new FormGrades());
             hideSubMenu();
         }
 

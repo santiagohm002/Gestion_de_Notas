@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="AdminDAL.cs" />
     <Compile Include="AssignmentDAL.cs" />
+    <Compile Include="GradeDAL.cs" />
     <Compile Include="ReportDAL.cs" />
     <Compile Include="StudentDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

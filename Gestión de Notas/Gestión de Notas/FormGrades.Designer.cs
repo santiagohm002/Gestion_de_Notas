@@ -28,59 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dtg_Student = new System.Windows.Forms.DataGridView();
-            this.txt_Grades = new System.Windows.Forms.ComboBox();
+            this.dtg_Grades = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
-            this.btn_Consult = new System.Windows.Forms.Button();
+            this.btn_AddGrade = new System.Windows.Forms.Button();
             this.btn_Close = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dtg_Student)).BeginInit();
+            this.txt_Grades = new System.Windows.Forms.TextBox();
+            this.txt_LevelEd = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btn_DeleteGrad = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dtg_Grades)).BeginInit();
             this.SuspendLayout();
             // 
-            // dtg_Student
+            // dtg_Grades
             // 
-            this.dtg_Student.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtg_Student.Location = new System.Drawing.Point(37, 95);
-            this.dtg_Student.Name = "dtg_Student";
-            this.dtg_Student.RowHeadersWidth = 51;
-            this.dtg_Student.RowTemplate.Height = 24;
-            this.dtg_Student.Size = new System.Drawing.Size(878, 291);
-            this.dtg_Student.TabIndex = 65;
-            // 
-            // txt_Grades
-            // 
-            this.txt_Grades.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.txt_Grades.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.txt_Grades.FormattingEnabled = true;
-            this.txt_Grades.Items.AddRange(new object[] {
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11"});
-            this.txt_Grades.Location = new System.Drawing.Point(92, 56);
-            this.txt_Grades.Name = "txt_Grades";
-            this.txt_Grades.Size = new System.Drawing.Size(203, 24);
-            this.txt_Grades.TabIndex = 64;
+            this.dtg_Grades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtg_Grades.Location = new System.Drawing.Point(37, 95);
+            this.dtg_Grades.Name = "dtg_Grades";
+            this.dtg_Grades.RowHeadersWidth = 51;
+            this.dtg_Grades.RowTemplate.Height = 24;
+            this.dtg_Grades.Size = new System.Drawing.Size(487, 291);
+            this.dtg_Grades.TabIndex = 65;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(38, 59);
+            this.label7.Location = new System.Drawing.Point(34, 27);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(48, 16);
+            this.label7.Size = new System.Drawing.Size(116, 16);
             this.label7.TabIndex = 63;
-            this.label7.Text = "Grado:";
+            this.label7.Text = "Nombre de Grado";
             // 
-            // btn_Consult
+            // btn_AddGrade
             // 
-            this.btn_Consult.Location = new System.Drawing.Point(37, 408);
-            this.btn_Consult.Name = "btn_Consult";
-            this.btn_Consult.Size = new System.Drawing.Size(249, 55);
-            this.btn_Consult.TabIndex = 81;
-            this.btn_Consult.Text = "Consultar por Especialidad";
-            this.btn_Consult.UseVisualStyleBackColor = true;
-            this.btn_Consult.Click += new System.EventHandler(this.btn_Consult_Click);
+            this.btn_AddGrade.Location = new System.Drawing.Point(37, 408);
+            this.btn_AddGrade.Name = "btn_AddGrade";
+            this.btn_AddGrade.Size = new System.Drawing.Size(213, 55);
+            this.btn_AddGrade.TabIndex = 81;
+            this.btn_AddGrade.Text = "Agregar Grado";
+            this.btn_AddGrade.UseVisualStyleBackColor = true;
+            this.btn_AddGrade.Click += new System.EventHandler(this.btn_AddGrade_Click);
             // 
             // btn_Close
             // 
@@ -92,19 +78,56 @@
             this.btn_Close.UseVisualStyleBackColor = true;
             this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
             // 
+            // txt_Grades
+            // 
+            this.txt_Grades.Location = new System.Drawing.Point(37, 46);
+            this.txt_Grades.Name = "txt_Grades";
+            this.txt_Grades.Size = new System.Drawing.Size(154, 22);
+            this.txt_Grades.TabIndex = 83;
+            // 
+            // txt_LevelEd
+            // 
+            this.txt_LevelEd.Location = new System.Drawing.Point(370, 46);
+            this.txt_LevelEd.Name = "txt_LevelEd";
+            this.txt_LevelEd.ReadOnly = true;
+            this.txt_LevelEd.Size = new System.Drawing.Size(154, 22);
+            this.txt_LevelEd.TabIndex = 85;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(367, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(101, 16);
+            this.label1.TabIndex = 84;
+            this.label1.Text = "Nivel Educativo";
+            // 
+            // btn_DeleteGrad
+            // 
+            this.btn_DeleteGrad.Location = new System.Drawing.Point(311, 408);
+            this.btn_DeleteGrad.Name = "btn_DeleteGrad";
+            this.btn_DeleteGrad.Size = new System.Drawing.Size(213, 55);
+            this.btn_DeleteGrad.TabIndex = 86;
+            this.btn_DeleteGrad.Text = "Eliminar Grado";
+            this.btn_DeleteGrad.UseVisualStyleBackColor = true;
+            this.btn_DeleteGrad.Click += new System.EventHandler(this.btn_DeleteGrad_Click);
+            // 
             // FormGrades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(966, 536);
-            this.Controls.Add(this.btn_Close);
-            this.Controls.Add(this.btn_Consult);
-            this.Controls.Add(this.dtg_Student);
+            this.Controls.Add(this.btn_DeleteGrad);
+            this.Controls.Add(this.txt_LevelEd);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_Grades);
+            this.Controls.Add(this.btn_Close);
+            this.Controls.Add(this.btn_AddGrade);
+            this.Controls.Add(this.dtg_Grades);
             this.Controls.Add(this.label7);
             this.Name = "FormGrades";
             this.Text = "FormGrades";
-            ((System.ComponentModel.ISupportInitialize)(this.dtg_Student)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtg_Grades)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -112,10 +135,13 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dtg_Student;
-        private System.Windows.Forms.ComboBox txt_Grades;
+        private System.Windows.Forms.DataGridView dtg_Grades;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button btn_Consult;
+        private System.Windows.Forms.Button btn_AddGrade;
         private System.Windows.Forms.Button btn_Close;
+        private System.Windows.Forms.TextBox txt_Grades;
+        private System.Windows.Forms.TextBox txt_LevelEd;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btn_DeleteGrad;
     }
 }

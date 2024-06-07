@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="AdminBLL.cs" />
     <Compile Include="AssignmentBLL.cs" />
+    <Compile Include="GradeBLL.cs" />
     <Compile Include="PortalBLL.cs" />
     <Compile Include="ReportBLL.cs" />
     <Compile Include="StudentBLL.cs" />
