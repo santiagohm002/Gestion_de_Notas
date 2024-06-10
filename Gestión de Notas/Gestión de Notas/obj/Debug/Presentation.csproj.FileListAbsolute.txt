@@ -21,3 +21,4 @@ C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\Gestión de Notas\obj\Deb
 C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\Gestión de Notas\obj\Debug\Gestión de Notas.exe
 C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\Gestión de Notas\obj\Debug\Gestión de Notas.pdb
 C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\Gestión de Notas\obj\Debug\Gestión_de_Notas.FormRoom.resources
+C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\Gestión de Notas\obj\Debug\Gestión_de_Notas.FormAssignStudent.resources

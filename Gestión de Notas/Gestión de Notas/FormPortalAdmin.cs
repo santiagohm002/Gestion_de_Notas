@@ -64,7 +64,7 @@ namespace Gestión_de_Notas
 
         private void btn_AssigStud_Click(object sender, EventArgs e)
         {
-            //openChildform(new FormAssigStud());
+            openChildform(new FormAssignStudent());
             hideSubMenu();
         }
 

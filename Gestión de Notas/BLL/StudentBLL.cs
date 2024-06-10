@@ -45,5 +45,15 @@ namespace BLL
         {
             return studentDAL.GetAllStudents();
         }
+
+        public List<Student> GetBasicStudentInfo()
+        {
+            return studentDAL.GetBasicStudentInfo();
+        }
+
+        public Student GetStudentByName(string nombreCompleto)
+        {
+            return studentDAL.GetStudentByName(nombreCompleto);
+        }
     }
 }

@@ -101,6 +101,31 @@ namespace DAL
                 return null;
             }
         }
+        public Student GetStudentByName(string nombreCompleto)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                using (SqlCommand cmd = new SqlCommand("SELECT ID, NombreCompleto, Identificacion, Edad FROM Estudiantes WHERE NombreCompleto = @NombreCompleto", conn))
+                {
+                    cmd.Parameters.AddWithValue("@NombreCompleto", nombreCompleto);
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        return new Student
+                        {
+                            ID = reader.GetInt32(0),
+                            NombreCompleto = reader.GetString(1),
+                            Identificacion = reader.GetInt32(2),
+                            Edad = reader.GetInt32(3)
+                        };
+                    }
+                }
+            }
+
+            return null;
+        }
+
         public List<Student> GetAllStudents()
         {
             List<Student> students = new List<Student>();
@@ -129,6 +154,32 @@ namespace DAL
                     };
 
                     students.Add(student);
+                }
+            }
+
+            return students;
+        }
+
+        public List<Student> GetBasicStudentInfo()
+        {
+            List<Student> students = new List<Student>();
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                using (SqlCommand cmd = new SqlCommand("SELECT ID, NombreCompleto, Identificacion, Edad FROM Estudiantes", conn))
+                {
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        students.Add(new Student
+                        {
+                            ID = reader.GetInt32(0),
+                            NombreCompleto = reader.GetString(1),
+                            Identificacion = reader.GetInt32(2),
+                            Edad = reader.GetInt32(3)
+                        });
+                    }
                 }
             }
 
