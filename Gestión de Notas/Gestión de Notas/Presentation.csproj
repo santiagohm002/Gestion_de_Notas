@@ -46,6 +46,66 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAdmin.Designer.cs">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAssignStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAssignStudent.Designer.cs">
+      <DependentUpon>FormAssignStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGrades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGrades.Designer.cs">
+      <DependentUpon>FormGrades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPeriods.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPeriods.Designer.cs">
+      <DependentUpon>FormPeriods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSchoolYear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSchoolYear.Designer.cs">
+      <DependentUpon>FormSchoolYear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPortalAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPortalAdmin.Designer.cs">
+      <DependentUpon>FormPortalAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRoom.Designer.cs">
+      <DependentUpon>FormRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStudent.Designer.cs">
+      <DependentUpon>FormStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSubject.Designer.cs">
+      <DependentUpon>FormSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTeacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTeacher.Designer.cs">
+      <DependentUpon>FormTeacher.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +114,36 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAdmin.resx">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAssignStudent.resx">
+      <DependentUpon>FormAssignStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGrades.resx">
+      <DependentUpon>FormGrades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPeriods.resx">
+      <DependentUpon>FormPeriods.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSchoolYear.resx">
+      <DependentUpon>FormSchoolYear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPortalAdmin.resx">
+      <DependentUpon>FormPortalAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRoom.resx">
+      <DependentUpon>FormRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStudent.resx">
+      <DependentUpon>FormStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSubject.resx">
+      <DependentUpon>FormSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTeacher.resx">
+      <DependentUpon>FormTeacher.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -83,6 +173,10 @@
     <ProjectReference Include="..\BLL\BLL.csproj">
       <Project>{48bfad67-2703-441b-b034-33b47ffb066e}</Project>
       <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entity\Entity.csproj">
+      <Project>{19644341-f8fa-462a-90e1-af44de25d64d}</Project>
+      <Name>Entity</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

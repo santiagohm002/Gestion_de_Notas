@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\santiagohm\\Gestion_de_Notas\\Gesti\u00F3n de Notas\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{26B35CD8-F6FD-461B-821C-CC42C9077C7C}|DAL\\DAL.csproj|C:\\Users\\santiagohm\\Gestion_de_Notas\\Gesti\u00F3n de Notas\\dal\\userdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26B35CD8-F6FD-461B-821C-CC42C9077C7C}|DAL\\DAL.csproj|solutionrelative:dal\\userdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9A890BEC-F3BF-49A9-B201-0D99B556014D}|Gesti\u00F3n de Notas\\Presentation.csproj|C:\\Users\\santiagohm\\Gestion_de_Notas\\Gesti\u00F3n de Notas\\gesti\u00F3n de notas\\formportaladmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A890BEC-F3BF-49A9-B201-0D99B556014D}|Gesti\u00F3n de Notas\\Presentation.csproj|solutionrelative:gesti\u00F3n de notas\\formportaladmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{48BFAD67-2703-441B-B034-33B47FFB066E}|BLL\\BLL.csproj|C:\\Users\\santiagohm\\Gestion_de_Notas\\Gesti\u00F3n de Notas\\bll\\userbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{48BFAD67-2703-441B-B034-33B47FFB066E}|BLL\\BLL.csproj|solutionrelative:bll\\userbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9A890BEC-F3BF-49A9-B201-0D99B556014D}|Gesti\u00F3n de Notas\\Presentation.csproj|c:\\users\\santiagohm\\gestion_de_notas\\gesti\u00F3n de notas\\gesti\u00F3n de notas\\formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9A890BEC-F3BF-49A9-B201-0D99B556014D}|Gesti\u00F3n de Notas\\Presentation.csproj|solutionrelative:gesti\u00F3n de notas\\formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9A890BEC-F3BF-49A9-B201-0D99B556014D}|Gesti\u00F3n de Notas\\Presentacion.csproj|c:\\users\\santiagohm\\gestion_de_notas\\gesti\u00F3n de notas\\gesti\u00F3n de notas\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A890BEC-F3BF-49A9-B201-0D99B556014D}|Gesti\u00F3n de Notas\\Presentacion.csproj|solutionrelative:gesti\u00F3n de notas\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9A890BEC-F3BF-49A9-B201-0D99B556014D}|Gesti\u00F3n de Notas\\Presentation.csproj|C:\\Users\\santiagohm\\Gestion_de_Notas\\Gesti\u00F3n de Notas\\gesti\u00F3n de notas\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9A890BEC-F3BF-49A9-B201-0D99B556014D}|Gesti\u00F3n de Notas\\Presentation.csproj|solutionrelative:gesti\u00F3n de notas\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9A890BEC-F3BF-49A9-B201-0D99B556014D}|Gesti\u00F3n de Notas\\Presentacion.csproj|C:\\Users\\santiagohm\\Gestion_de_Notas\\Gesti\u00F3n de Notas\\gesti\u00F3n de notas\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9A890BEC-F3BF-49A9-B201-0D99B556014D}|Gesti\u00F3n de Notas\\Presentacion.csproj|solutionrelative:gesti\u00F3n de notas\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{9A890BEC-F3BF-49A9-B201-0D99B556014D}|Gesti\u00F3n de Notas\\Presentation.csproj|C:\\Users\\santiagohm\\Gestion_de_Notas\\Gesti\u00F3n de Notas\\gesti\u00F3n de notas\\formportaladmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9A890BEC-F3BF-49A9-B201-0D99B556014D}|Gesti\u00F3n de Notas\\Presentation.csproj|solutionrelative:gesti\u00F3n de notas\\formportaladmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,52 +31,50 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "UserDAL.cs",
-              "DocumentMoniker": "C:\\Users\\santiagohm\\Gestion_de_Notas\\Gesti\u00F3n de Notas\\DAL\\UserDAL.cs",
-              "RelativeDocumentMoniker": "DAL\\UserDAL.cs",
-              "ToolTip": "C:\\Users\\santiagohm\\Gestion_de_Notas\\Gesti\u00F3n de Notas\\DAL\\UserDAL.cs",
-              "RelativeToolTip": "DAL\\UserDAL.cs",
-              "ViewState": "AQIAAFIAAAAAAAAAAAAkwFwAAAAAAAAA",
+              "Title": "FormPortalAdmin.cs",
+              "DocumentMoniker": "C:\\Users\\santiagohm\\Gestion_de_Notas\\Gesti\u00F3n de Notas\\Gesti\u00F3n de Notas\\FormPortalAdmin.cs",
+              "RelativeDocumentMoniker": "Gesti\u00F3n de Notas\\FormPortalAdmin.cs",
+              "ToolTip": "C:\\Users\\santiagohm\\Gestion_de_Notas\\Gesti\u00F3n de Notas\\Gesti\u00F3n de Notas\\FormPortalAdmin.cs",
+              "RelativeToolTip": "Gesti\u00F3n de Notas\\FormPortalAdmin.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAhwHsAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T00:48:40.732Z",
+              "WhenOpened": "2024-06-08T01:53:39.389Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "UserBLL.cs",
-              "DocumentMoniker": "C:\\Users\\santiagohm\\Gestion_de_Notas\\Gesti\u00F3n de Notas\\BLL\\UserBLL.cs",
-              "RelativeDocumentMoniker": "BLL\\UserBLL.cs",
-              "ToolTip": "C:\\Users\\santiagohm\\Gestion_de_Notas\\Gesti\u00F3n de Notas\\BLL\\UserBLL.cs",
-              "RelativeToolTip": "BLL\\UserBLL.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAFAAAA",
+              "Title": "FormAdmin.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\santiagohm\\Gestion_de_Notas\\Gesti\u00F3n de Notas\\Gesti\u00F3n de Notas\\FormAdmin.cs",
+              "RelativeDocumentMoniker": "Gesti\u00F3n de Notas\\FormAdmin.cs",
+              "ToolTip": "C:\\Users\\santiagohm\\Gestion_de_Notas\\Gesti\u00F3n de Notas\\Gesti\u00F3n de Notas\\FormAdmin.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Gesti\u00F3n de Notas\\FormAdmin.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T00:49:55.736Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Login.cs",
-              "DocumentMoniker": "C:\\Users\\santiagohm\\Gestion_de_Notas\\Gesti\u00F3n de Notas\\Gesti\u00F3n de Notas\\Login.cs",
-              "RelativeDocumentMoniker": "Gesti\u00F3n de Notas\\Login.cs",
-              "ToolTip": "C:\\Users\\santiagohm\\Gestion_de_Notas\\Gesti\u00F3n de Notas\\Gesti\u00F3n de Notas\\Login.cs",
-              "RelativeToolTip": "Gesti\u00F3n de Notas\\Login.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAYwB0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-08T15:31:29.908Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-18T14:00:00.717Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "FormPortalAdmin.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\santiagohm\\Gestion_de_Notas\\Gesti\u00F3n de Notas\\Gesti\u00F3n de Notas\\FormPortalAdmin.cs",
+              "RelativeDocumentMoniker": "Gesti\u00F3n de Notas\\FormPortalAdmin.cs",
+              "ToolTip": "C:\\Users\\santiagohm\\Gestion_de_Notas\\Gesti\u00F3n de Notas\\Gesti\u00F3n de Notas\\FormPortalAdmin.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Gesti\u00F3n de Notas\\FormPortalAdmin.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-08T01:53:14.821Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Login.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\santiagohm\\Gestion_de_Notas\\Gesti\u00F3n de Notas\\Gesti\u00F3n de Notas\\Login.cs",
               "RelativeDocumentMoniker": "Gesti\u00F3n de Notas\\Login.cs",
               "ToolTip": "C:\\Users\\santiagohm\\Gestion_de_Notas\\Gesti\u00F3n de Notas\\Gesti\u00F3n de Notas\\Login.cs [Dise\u00F1o]",
               "RelativeToolTip": "Gesti\u00F3n de Notas\\Login.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-08T02:04:11.267Z",
+              "WhenOpened": "2024-06-05T20:51:28.09Z",
               "EditorCaption": " [Dise\u00F1o]"
             }
           ]

@@ -42,10 +42,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdminBLL.cs" />
-    <Compile Include="PortalBLL.cs" />
-    <Compile Include="ReportBLL.cs" />
+    <Compile Include="AssignedStudentsBLL.cs" />
+    <Compile Include="GradeBLL.cs" />
+    <Compile Include="PeriodBLL.cs" />
+    <Compile Include="RoomBLL.cs" />
+    <Compile Include="SchoolYearBLL.cs" />
     <Compile Include="StudentBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SubjectBLL.cs" />
     <Compile Include="TeacherBLL.cs" />
     <Compile Include="UserBLL.cs" />
   </ItemGroup>
@@ -53,6 +57,10 @@
     <ProjectReference Include="..\DAL\DAL.csproj">
       <Project>{26b35cd8-f6fd-461b-821c-cc42c9077c7c}</Project>
       <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entity\Entity.csproj">
+      <Project>{19644341-f8fa-462a-90e1-af44de25d64d}</Project>
+      <Name>Entity</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

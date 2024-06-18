@@ -7,3 +7,5 @@ C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\BLL\obj\Debug\BLL.csproj.
 C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\BLL\obj\Debug\BLL.csproj.Up2Date
 C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\BLL\obj\Debug\BLL.dll
 C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\BLL\obj\Debug\BLL.pdb
+C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\BLL\bin\Debug\Entity.dll
+C:\Users\santiagohm\Gestion_de_Notas\Gestión de Notas\BLL\bin\Debug\Entity.pdb

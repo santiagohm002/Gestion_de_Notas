@@ -40,7 +40,10 @@ namespace Gestión_de_Notas
                     switch (userType)
                     {
                         case "Administrador":
-                            MessageBox.Show("Bienvenido");
+                            this.Hide();
+
+                            FormPortalAdmin v1 = new FormPortalAdmin();
+                            v1.Show();
                             break;
                         case "Estudiante":
                             MessageBox.Show("Bienvenido");
@@ -55,7 +58,7 @@ namespace Gestión_de_Notas
 
                     txt_User.Text = "";
                     txt_Pass.Text = "";
-                    this.Close();
+                    this.Hide();
                 }
                 else
                 {
