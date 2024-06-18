@@ -21,7 +21,7 @@ namespace Gestión_de_Notas
         public FormAssignStudent()
         {
             InitializeComponent();
-            string connectionString = "Data Source=108.181.184.38; Initial Catalog=SantiagoDB; User ID=santiagohernandez; Password=Holamundo123*";
+            string connectionString = "Data Source=sql.hmdevs.com; Initial Catalog=SantiagoDB; User ID=santiagohernandez; Password=Holamundo123*";
             assignedStudentBLL = new AssignedStudentBLL(connectionString);
             studentBLL = new StudentBLL(connectionString);
             roomBLL = new RoomBLL(connectionString);
@@ -86,6 +86,12 @@ namespace Gestión_de_Notas
                 dtg_AssignedStudents.Rows.Add(assignedStudent.ID, assignedStudent.NombreEstudiante, assignedStudent.SalonAsignado);
             }
         }
+        private void ClearFields()
+        {
+            txt_RoomName.Clear();
+            txt_NewRoomName.Clear();
+            txt_StudentName.Clear();
+        }
 
         private void btn_AssignStudent_Click(object sender, EventArgs e)
         {
@@ -118,6 +124,7 @@ namespace Gestión_de_Notas
                 assignedStudentBLL.AddAssignedStudent(student.ID, room.ID);
                 MessageBox.Show("Estudiante asignado correctamente.");
                 RefreshAssignedStudentGrid();
+                ClearFields();
             }
             catch (Exception ex)
             {
@@ -157,6 +164,7 @@ namespace Gestión_de_Notas
                 assignedStudentBLL.DeleteAssignedStudent(assignedStudent.ID);
                 MessageBox.Show("Asignación eliminada correctamente.");
                 RefreshAssignedStudentGrid();
+                ClearFields();
             }
         }
 
@@ -197,6 +205,7 @@ namespace Gestión_de_Notas
             assignedStudentBLL.UpdateAssignedStudent(assignedStudent.ID, newRoom.ID);
             MessageBox.Show("Asignación actualizada correctamente.");
             RefreshAssignedStudentGrid();
+            ClearFields();
         }
 
         private void btn_ViewStudentsInRoom_Click(object sender, EventArgs e)
@@ -223,6 +232,7 @@ namespace Gestión_de_Notas
             {
                 dtg_AssignedStudents.Rows.Add(assignedStudent.ID, assignedStudent.NombreEstudiante, assignedStudent.SalonAsignado);
             }
+            ClearFields();
         }
 
         private void btn_Close_Click(object sender, EventArgs e)

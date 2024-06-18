@@ -15,7 +15,7 @@ namespace Gestión_de_Notas
     public partial class FormStudent : Form
     {
         private readonly StudentBLL studentBLL;
-        private readonly string connectionString = "Data Source= 108.181.184.38; Initial Catalog= SantiagoDB ;User ID= santiagohernandez ;Password= Holamundo123*";
+        private readonly string connectionString = "Data Source=sql.hmdevs.com; Initial Catalog=SantiagoDB; User ID=santiagohernandez; Password=Holamundo123*";
         public FormStudent()
         {
             InitializeComponent();
@@ -45,7 +45,6 @@ namespace Gestión_de_Notas
             dtg_Student.Columns.Add("TelefonoContacto", "Teléfono de Contacto");
             dtg_Student.Columns.Add("CorreoElectronico", "Correo Electrónico");
         }
-
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
@@ -110,9 +109,9 @@ namespace Gestión_de_Notas
                 return false;
             }
         }
+
         private void btn_Update_Click(object sender, EventArgs e)
         {
-
             // Validar el formato del correo electrónico
             if (!IsValidEmail(txt_Email.Text))
             {

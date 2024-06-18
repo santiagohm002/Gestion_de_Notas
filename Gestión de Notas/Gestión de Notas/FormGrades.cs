@@ -24,7 +24,7 @@ namespace Gestión_de_Notas
         public FormGrades()
         {
             InitializeComponent();
-            string connectionString = "Data Source= 108.181.184.38; Initial Catalog= SantiagoDB ;User ID= santiagohernandez ;Password= Holamundo123*";
+            string connectionString = "Data Source=sql.hmdevs.com; Initial Catalog=SantiagoDB; User ID=santiagohernandez; Password=Holamundo123*";
             gradeBLL = new GradeBLL(connectionString);
             InitializeDataGridView();
             RefreshGradeGrid();
@@ -38,7 +38,7 @@ namespace Gestión_de_Notas
         {
             dtg_Grades.Columns.Clear();
             dtg_Grades.Columns.Add("ID", "ID");
-            dtg_Grades.Columns.Add("NombreGrado", "Nombre");
+            dtg_Grades.Columns.Add("NombreGrado", "Nombre del Grado");
             dtg_Grades.Columns.Add("NivelEducacional", "Nivel Educativo");
 
             dtg_Grades.SelectionChanged += dtg_Grades_SelectionChanged;

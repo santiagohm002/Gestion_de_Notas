@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Gestion_de_Notas;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -87,13 +88,13 @@ namespace Gestión_de_Notas
 
         private void btn_RegistTeach_Click(object sender, EventArgs e)
         {
-            //openChildform(new FormRegistTeach());
+            openChildform(new FormTeacher());
             hideSubMenu();
         }
 
         private void btn_AssigTeach_Click(object sender, EventArgs e)
         {
-            //openChildform(new FormAssigTeach());
+            openChildform(new FormSubject());
             hideSubMenu();
         }
 
@@ -120,19 +121,25 @@ namespace Gestión_de_Notas
         }
         private void btn_RegistAdmin_Click(object sender, EventArgs e)
         {
-            //openChildform(new FormRegistAdmin());
+            openChildform(new FormAdmin());
             hideSubMenu();
         }
 
         private void btn_Periods_Click(object sender, EventArgs e)
         {
-            //openChildform(new FormPeriods());
+            openChildform(new FormPeriods());
             hideSubMenu();
         }
 
         private void btn_Notes_Click(object sender, EventArgs e)
         {
             //openChildform(new FormNotesAdmin());
+            hideSubMenu();
+        }
+
+        private void btn_SchoolYear_Click(object sender, EventArgs e)
+        {
+            openChildform(new FormSchoolYear());
             hideSubMenu();
         }
 

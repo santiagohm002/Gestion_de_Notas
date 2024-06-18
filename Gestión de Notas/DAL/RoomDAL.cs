@@ -48,6 +48,32 @@ namespace DAL
                 }
             }
 
+            public Room GetRoomById(int id)
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    string query = "SELECT * FROM Salones WHERE ID = @ID";
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@ID", id);
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                return new Room
+                                {
+                                    ID = (int)reader["ID"],
+                                    NombreSalon = (string)reader["NombreSalon"],
+                                    IDGrado = (int)reader["IDGrado"]
+                                };
+                            }
+                        }
+                    }
+                }
+                return null;
+            }
+
             public Room GetRoomByName(string nombreSalon)
             {
                 Room room = null;
@@ -115,6 +141,47 @@ namespace DAL
                     }
                 }
                 return rooms;
+            }
+
+            public List<Subject> GetSubjectsByRoom(string roomName)
+            {
+                List<Subject> subjects = new List<Subject>();
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    string query = @"
+                    SELECT 
+                        s.ID,
+                        s.NombreMateria,
+                        t.NombreCompleto AS DocenteEncargado,
+                        r.NombreSalon AS SalonAsignado,
+                        s.DocenteEncargadoID,
+                        s.SalonAsignadoID
+                    FROM Materias s
+                    JOIN Docentes t ON s.DocenteEncargadoID = t.ID
+                    JOIN Salones r ON s.SalonAsignadoID = r.ID
+                    WHERE r.NombreSalon = @RoomName";
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@RoomName", roomName);
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                subjects.Add(new Subject
+                                {
+                                    ID = (int)reader["ID"],
+                                    NombreMateria = reader["NombreMateria"].ToString(),
+                                    DocenteEncargado = reader["DocenteEncargado"].ToString(),
+                                    SalonAsignado = reader["SalonAsignado"].ToString(),
+                                    DocenteEncargadoID = (int)reader["DocenteEncargadoID"],
+                                    SalonAsignadoID = (int)reader["SalonAsignadoID"]
+                                });
+                            }
+                        }
+                    }
+                }
+                return subjects;
             }
         }
     }

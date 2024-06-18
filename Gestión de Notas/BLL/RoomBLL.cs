@@ -18,28 +18,60 @@ namespace BLL
             roomDAL = new RoomDAL(connectionString);
         }
 
-        // Método para agregar un salón
-        public void AddRoom(Room room)
+        public Room GetRoomById(int id)
         {
-            roomDAL.AddRoom(room);
+            if (id <= 0)
+            {
+                throw new ArgumentException("El ID del salón debe ser un número positivo.");
+            }
+            return roomDAL.GetRoomById(id);
         }
 
-        // Método para eliminar un salón por su nombre
-        public void DeleteRoomByName(string nombreSalon)
-        {
-            roomDAL.DeleteRoomByName(nombreSalon);
-        }
-
-        // Método para obtener todos los salones
         public List<Room> GetAllRooms()
         {
             return roomDAL.GetAllRooms();
         }
 
-        // Método para obtener un salón por su nombre
-        public Room GetRoomByName(string nombreSalon)
+        public Room GetRoomByName(string name)
         {
-            return roomDAL.GetRoomByName(nombreSalon);
+            if (string.IsNullOrEmpty(name))
+            {
+                throw new ArgumentException("El nombre del salón no puede estar vacío.");
+            }
+            return roomDAL.GetRoomByName(name);
+        }
+
+        public void AddRoom(Room room)
+        {
+            ValidateRoom(room);
+            roomDAL.AddRoom(room);
+        }
+
+        public void DeleteRoomByName(string name)
+        {
+            if (string.IsNullOrEmpty(name))
+            {
+                throw new ArgumentException("El nombre del salón no puede estar vacío.");
+            }
+            roomDAL.DeleteRoomByName(name);
+        }
+
+        private void ValidateRoom(Room room)
+        {
+            if (string.IsNullOrEmpty(room.NombreSalon))
+            {
+                throw new ArgumentException("El nombre del salón no puede estar vacío.");
+            }
+
+            if (room.IDGrado <= 0)
+            {
+                throw new ArgumentException("El ID del grado debe ser un número positivo.");
+            }
+        }
+
+        public List<Subject> GetSubjectsByRoom(string roomName)
+        {
+            return roomDAL.GetSubjectsByRoom(roomName);
         }
     }
 }

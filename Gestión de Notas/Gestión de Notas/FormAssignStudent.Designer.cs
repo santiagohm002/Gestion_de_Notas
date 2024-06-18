@@ -66,17 +66,17 @@
             // dtg_AssignedStudents
             // 
             this.dtg_AssignedStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtg_AssignedStudents.Location = new System.Drawing.Point(479, 57);
+            this.dtg_AssignedStudents.Location = new System.Drawing.Point(30, 246);
             this.dtg_AssignedStudents.Name = "dtg_AssignedStudents";
             this.dtg_AssignedStudents.RowHeadersWidth = 51;
             this.dtg_AssignedStudents.RowTemplate.Height = 24;
-            this.dtg_AssignedStudents.Size = new System.Drawing.Size(443, 372);
+            this.dtg_AssignedStudents.Size = new System.Drawing.Size(398, 183);
             this.dtg_AssignedStudents.TabIndex = 107;
             // 
-            // btn_ViewStudentsInRoom
+            // btn_ViewAssignedStudents
             // 
             this.btn_ViewAssignedStudents.Location = new System.Drawing.Point(264, 435);
-            this.btn_ViewAssignedStudents.Name = "btn_ViewStudentsInRoom";
+            this.btn_ViewAssignedStudents.Name = "btn_ViewAssignedStudents";
             this.btn_ViewAssignedStudents.Size = new System.Drawing.Size(179, 55);
             this.btn_ViewAssignedStudents.TabIndex = 106;
             this.btn_ViewAssignedStudents.Text = "Ver Lista del Salón";
@@ -117,7 +117,7 @@
             this.dtg_Room.Name = "dtg_Room";
             this.dtg_Room.RowHeadersWidth = 51;
             this.dtg_Room.RowTemplate.Height = 24;
-            this.dtg_Room.Size = new System.Drawing.Size(443, 183);
+            this.dtg_Room.Size = new System.Drawing.Size(398, 183);
             this.dtg_Room.TabIndex = 100;
             // 
             // label7
@@ -132,11 +132,11 @@
             // dtg_Students
             // 
             this.dtg_Students.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtg_Students.Location = new System.Drawing.Point(30, 246);
+            this.dtg_Students.Location = new System.Drawing.Point(434, 57);
             this.dtg_Students.Name = "dtg_Students";
             this.dtg_Students.RowHeadersWidth = 51;
             this.dtg_Students.RowTemplate.Height = 24;
-            this.dtg_Students.Size = new System.Drawing.Size(443, 183);
+            this.dtg_Students.Size = new System.Drawing.Size(488, 372);
             this.dtg_Students.TabIndex = 110;
             // 
             // btn_DeleteAssignment

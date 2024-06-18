@@ -27,7 +27,7 @@ namespace Gestión_de_Notas
         public FormRoom()
         {
             InitializeComponent();
-            string connectionString = "Data Source=108.181.184.38; Initial Catalog=SantiagoDB; User ID=santiagohernandez; Password=Holamundo123*";
+            string connectionString = "Data Source=sql.hmdevs.com; Initial Catalog=SantiagoDB; User ID=santiagohernandez; Password=Holamundo123*";
             roomBLL = new RoomBLL(connectionString);
             gradeBLL = new GradeBLL(connectionString);
             InitializeDataGridViews();

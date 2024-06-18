@@ -46,23 +46,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAdmin.Designer.cs">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAssignStudent.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormAssignStudent.Designer.cs">
       <DependentUpon>FormAssignStudent.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormAssigTeach.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormAssigTeach.Designer.cs">
-      <DependentUpon>FormAssigTeach.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormGrades.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormGrades.Designer.cs">
       <DependentUpon>FormGrades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPeriods.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPeriods.Designer.cs">
+      <DependentUpon>FormPeriods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSchoolYear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSchoolYear.Designer.cs">
+      <DependentUpon>FormSchoolYear.cs</DependentUpon>
     </Compile>
     <Compile Include="FormPortalAdmin.cs">
       <SubType>Form</SubType>
@@ -82,6 +94,12 @@
     <Compile Include="FormStudent.Designer.cs">
       <DependentUpon>FormStudent.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSubject.Designer.cs">
+      <DependentUpon>FormSubject.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormTeacher.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,14 +114,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAdmin.resx">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAssignStudent.resx">
       <DependentUpon>FormAssignStudent.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormAssigTeach.resx">
-      <DependentUpon>FormAssigTeach.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormGrades.resx">
       <DependentUpon>FormGrades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPeriods.resx">
+      <DependentUpon>FormPeriods.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSchoolYear.resx">
+      <DependentUpon>FormSchoolYear.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPortalAdmin.resx">
       <DependentUpon>FormPortalAdmin.cs</DependentUpon>
@@ -113,6 +137,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormStudent.resx">
       <DependentUpon>FormStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSubject.resx">
+      <DependentUpon>FormSubject.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTeacher.resx">
       <DependentUpon>FormTeacher.cs</DependentUpon>

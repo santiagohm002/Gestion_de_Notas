@@ -16,34 +16,85 @@ namespace BLL
         {
             teacherDAL = new TeacherDAL(connectionString);
         }
-        public List<Teacher> ObtenerTodosLosDocentes()
-        {
-            return teacherDAL.ObtenerTodosLosDocentes();
-        }
 
-        public List<Teacher> ConsultarDocentesPorEspecialidad(string especialidad)
+        public Teacher GetTeacherById(int id)
         {
-            return teacherDAL.ObtenerDocentesPorEspecialidad(especialidad);
-        }
-        public void CrearDocente(Teacher docente)
-        {
-            teacherDAL.CrearDocente(docente);
-        }
-
-        public void EditarDocente(Teacher docente)
-        {
-            teacherDAL.EditarDocente(docente);
-        }
-
-        public void EliminarDocente(int id)
-        {
-            try
+            if (id <= 0)
             {
-                teacherDAL.EliminarDocente(id);
+                throw new ArgumentException("El ID del docente debe ser un número positivo.");
             }
-            catch (Exception ex)
+            return teacherDAL.GetTeacherById(id);
+        }
+
+        public List<Teacher> GetTeachersBySpecialty(string specialty)
+        {
+            if (string.IsNullOrEmpty(specialty))
             {
-                throw new Exception("Error al eliminar la Docente: " + ex.Message);
+                throw new ArgumentException("La especialidad no puede estar vacía.");
+            }
+            return teacherDAL.GetTeachersBySpecialty(specialty);
+        }
+
+        public Teacher GetTeacherByName(string name)
+        {
+            if (string.IsNullOrEmpty(name))
+            {
+                throw new ArgumentException("El nombre del docente no puede estar vacío.");
+            }
+            return teacherDAL.GetTeacherByName(name);
+        }
+
+        public void AddTeacher(Teacher teacher)
+        {
+            ValidateTeacher(teacher);
+            teacherDAL.AddTeacher(teacher);
+        }
+
+        public void UpdateTeacher(Teacher teacher)
+        {
+            ValidateTeacher(teacher);
+            teacherDAL.UpdateTeacher(teacher);
+        }
+
+        public void DeleteTeacher(string identificacion)
+        {
+            if (string.IsNullOrEmpty(identificacion))
+            {
+                throw new ArgumentException("La identificación no puede estar vacía.");
+            }
+            teacherDAL.DeleteTeacher(identificacion);
+        }
+
+        public List<Teacher> GetAllTeachers()
+        {
+            return teacherDAL.GetAllTeachers();
+        }
+
+        public List<Teacher> GetBasicInfoTeachers()
+        {
+            return teacherDAL.GetBasicInfoTeachers();
+        }
+
+        public bool IsIdentificationDuplicate(string identification)
+        {
+            return teacherDAL.IsIdentificationDuplicate(identification);
+        }
+
+        private void ValidateTeacher(Teacher teacher)
+        {
+            if (string.IsNullOrEmpty(teacher.NombreCompleto))
+            {
+                throw new ArgumentException("El nombre completo no puede estar vacío.");
+            }
+
+            if (string.IsNullOrEmpty(teacher.Identificacion))
+            {
+                throw new ArgumentException("La identificación no puede estar vacía.");
+            }
+
+            if (string.IsNullOrEmpty(teacher.Especialidad))
+            {
+                throw new ArgumentException("La especialidad no puede estar vacía.");
             }
         }
     }

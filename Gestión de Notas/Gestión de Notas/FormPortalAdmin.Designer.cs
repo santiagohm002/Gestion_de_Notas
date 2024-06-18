@@ -55,6 +55,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panelChildform = new System.Windows.Forms.Panel();
+            this.btn_SchoolYear = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             this.panelAdminSubmenu.SuspendLayout();
             this.panelGradesSubmenu.SuspendLayout();
@@ -69,6 +70,7 @@
             // 
             this.panelSideMenu.AutoScroll = true;
             this.panelSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(81)))), ((int)(((byte)(255)))));
+            this.panelSideMenu.Controls.Add(this.btn_SchoolYear);
             this.panelSideMenu.Controls.Add(this.btn_Notes);
             this.panelSideMenu.Controls.Add(this.btn_Periods);
             this.panelSideMenu.Controls.Add(this.panelAdminSubmenu);
@@ -97,7 +99,7 @@
             this.btn_Notes.Location = new System.Drawing.Point(0, 944);
             this.btn_Notes.Name = "btn_Notes";
             this.btn_Notes.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btn_Notes.Size = new System.Drawing.Size(229, 50);
+            this.btn_Notes.Size = new System.Drawing.Size(229, 55);
             this.btn_Notes.TabIndex = 24;
             this.btn_Notes.Text = "Notas";
             this.btn_Notes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -264,7 +266,7 @@
             this.btn_RegistTeach.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.btn_RegistTeach.Size = new System.Drawing.Size(229, 63);
             this.btn_RegistTeach.TabIndex = 0;
-            this.btn_RegistTeach.Text = "Matricular Docente";
+            this.btn_RegistTeach.Text = "Registrar Docente";
             this.btn_RegistTeach.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_RegistTeach.UseVisualStyleBackColor = true;
             this.btn_RegistTeach.Click += new System.EventHandler(this.btn_RegistTeach_Click);
@@ -372,7 +374,7 @@
             this.btn_Close.FlatAppearance.BorderSize = 0;
             this.btn_Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Close.ForeColor = System.Drawing.Color.White;
-            this.btn_Close.Location = new System.Drawing.Point(0, 994);
+            this.btn_Close.Location = new System.Drawing.Point(0, 1049);
             this.btn_Close.Name = "btn_Close";
             this.btn_Close.Size = new System.Drawing.Size(229, 45);
             this.btn_Close.TabIndex = 14;
@@ -444,6 +446,22 @@
             this.panelChildform.Size = new System.Drawing.Size(972, 566);
             this.panelChildform.TabIndex = 3;
             // 
+            // btn_SchoolYear
+            // 
+            this.btn_SchoolYear.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_SchoolYear.FlatAppearance.BorderSize = 0;
+            this.btn_SchoolYear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_SchoolYear.ForeColor = System.Drawing.Color.White;
+            this.btn_SchoolYear.Location = new System.Drawing.Point(0, 999);
+            this.btn_SchoolYear.Name = "btn_SchoolYear";
+            this.btn_SchoolYear.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btn_SchoolYear.Size = new System.Drawing.Size(229, 50);
+            this.btn_SchoolYear.TabIndex = 25;
+            this.btn_SchoolYear.Text = "Año Escolar";
+            this.btn_SchoolYear.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_SchoolYear.UseVisualStyleBackColor = true;
+            this.btn_SchoolYear.Click += new System.EventHandler(this.btn_SchoolYear_Click);
+            // 
             // FormPortalAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -499,5 +517,6 @@
         private System.Windows.Forms.Button btn_Periods;
         private System.Windows.Forms.Button btn_GrafSub;
         private System.Windows.Forms.Button btn_GrafRoom;
+        private System.Windows.Forms.Button btn_SchoolYear;
     }
 }

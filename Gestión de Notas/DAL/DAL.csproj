@@ -43,12 +43,14 @@
   <ItemGroup>
     <Compile Include="AdminDAL.cs" />
     <Compile Include="AssignedStudentsDAL.cs" />
-    <Compile Include="AssignmentDAL.cs" />
     <Compile Include="GradeDAL.cs" />
+    <Compile Include="PeriodDAL.cs" />
     <Compile Include="ReportDAL.cs" />
     <Compile Include="RoomDAL.cs" />
+    <Compile Include="SchoolYearDAL.cs" />
     <Compile Include="StudentDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SubjectDAL.cs" />
     <Compile Include="TeacherDAL.cs" />
     <Compile Include="UserDAL.cs" />
   </ItemGroup>

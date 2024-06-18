@@ -21,8 +21,8 @@ namespace DAL
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = @"INSERT INTO Estudiantes (NombreCompleto, Identificacion, FechaNacimiento, Direccion, TelefonoContacto, CorreoElectronico) 
-                         VALUES (@NombreCompleto, @Identificacion, @FechaNacimiento, @Direccion, @TelefonoContacto, @CorreoElectronico)";
+                string query = @"INSERT INTO Estudiantes (NombreCompleto, Identificacion, FechaNacimiento, Direccion, TelefonoContacto, CorreoElectronico, Edad) 
+                         VALUES (@NombreCompleto, @Identificacion, @FechaNacimiento, @Direccion, @TelefonoContacto, @CorreoElectronico, @Edad)";
 
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@NombreCompleto", student.NombreCompleto);
@@ -31,6 +31,7 @@ namespace DAL
                 command.Parameters.AddWithValue("@Direccion", student.Direccion);
                 command.Parameters.AddWithValue("@TelefonoContacto", student.TelefonoContacto);
                 command.Parameters.AddWithValue("@CorreoElectronico", student.CorreoElectronico);
+                command.Parameters.AddWithValue("@Edad", student.Edad);
 
                 connection.Open();
                 command.ExecuteNonQuery();
@@ -42,7 +43,7 @@ namespace DAL
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 string query = "UPDATE Estudiantes SET NombreCompleto = @NombreCompleto, FechaNacimiento = @FechaNacimiento, " +
-                               "Direccion = @Direccion, TelefonoContacto = @TelefonoContacto, CorreoElectronico = @CorreoElectronico " +
+                               "Direccion = @Direccion, TelefonoContacto = @TelefonoContacto, CorreoElectronico = @CorreoElectronico, Edad = @Edad " +
                                "WHERE Identificacion = @Identificacion";
 
                 SqlCommand command = new SqlCommand(query, connection);
@@ -52,10 +53,45 @@ namespace DAL
                 command.Parameters.AddWithValue("@TelefonoContacto", student.TelefonoContacto);
                 command.Parameters.AddWithValue("@CorreoElectronico", student.CorreoElectronico);
                 command.Parameters.AddWithValue("@Identificacion", student.Identificacion);
+                command.Parameters.AddWithValue("@Edad", student.Edad);
 
                 connection.Open();
                 command.ExecuteNonQuery();
             }
+        }
+
+        public List<Student> GetAllStudents()
+        {
+            List<Student> students = new List<Student>();
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "SELECT * FROM Estudiantes";
+
+                SqlCommand command = new SqlCommand(query, connection);
+
+                connection.Open();
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    Student student = new Student
+                    {
+                        ID = (int)reader["ID"],
+                        NombreCompleto = (string)reader["NombreCompleto"],
+                        Identificacion = (int)reader["Identificacion"],
+                        FechaNacimiento = (DateTime)reader["FechaNacimiento"],
+                        Direccion = (string)reader["Direccion"],
+                        TelefonoContacto = (string)reader["TelefonoContacto"],
+                        CorreoElectronico = (string)reader["CorreoElectronico"]
+                    };
+
+                    students.Add(student);
+                }
+            }
+
+            return students;
         }
 
         public void DeleteStudent(int identificacion)
@@ -126,40 +162,6 @@ namespace DAL
             return null;
         }
 
-        public List<Student> GetAllStudents()
-        {
-            List<Student> students = new List<Student>();
-
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                string query = "SELECT * FROM Estudiantes";
-
-                SqlCommand command = new SqlCommand(query, connection);
-
-                connection.Open();
-
-                SqlDataReader reader = command.ExecuteReader();
-
-                while (reader.Read())
-                {
-                    Student student = new Student
-                    {
-                        ID = (int)reader["ID"],
-                        NombreCompleto = (string)reader["NombreCompleto"],
-                        Identificacion = (int)reader["Identificacion"],
-                        FechaNacimiento = (DateTime)reader["FechaNacimiento"],
-                        Direccion = (string)reader["Direccion"],
-                        TelefonoContacto = (string)reader["TelefonoContacto"],
-                        CorreoElectronico = (string)reader["CorreoElectronico"]
-                    };
-
-                    students.Add(student);
-                }
-            }
-
-            return students;
-        }
-
         public List<Student> GetBasicStudentInfo()
         {
             List<Student> students = new List<Student>();
@@ -172,7 +174,7 @@ namespace DAL
                     SqlDataReader reader = cmd.ExecuteReader();
                     while (reader.Read())
                     {
-                        students.Add(new Student
+                       students.Add(new Student
                         {
                             ID = reader.GetInt32(0),
                             NombreCompleto = reader.GetString(1),
